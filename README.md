@@ -1,4 +1,4 @@
 LinuxPhotoWorkflow
 ==================
 
-Bash scripts our batir mon workflow photo sous Linux
+Bash scripts oour batir mon workflow photo sous Linux
