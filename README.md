@@ -1,22 +1,28 @@
-LinuxPhotoWorkflow
-==================
 
-Bash script pour batir mon workflow photo sous Linux
+    Start Git Bash.
+    Configure Git to disable SSL, if necessary.
 
-workflow.sh v1.0.2 Déchargement et pré-classement lot de photos
+    git config --global http.sslVerify false
 
-History
+    Configure the proxy server, if necessary.
+    git config --global http.proxy http://www.testproxyserver.com:80/
 
-2014_12_19 - v1.0.3- Normalise et renomme fichiers source .jpg en .JPG
-2014_08_17 - v1.0.2- Ajout paramètres  -auto-orient -auto-level -quality 90  imagemagick pour thumbnails
-2014_08_17 - v1.0.1- Ajout répertoire  $2/4.WORKRAW
+ 
+    Navigate to the directory where you want to clone the Git cloud repository.
+    Clone the Git cloud repository using the desired protocol.
+    git clone https://github.com/lephotographelibre/LinuxPhotoWorkflow.git
 
-Format de nom des images YYYY_MM_DD_img_XXXX.jpg ou YYYY_MM_DD_IMG_img.cr2 (Minuscules/sans espaces)
+    Copy the application files to the cloned repository directory.
 
-Paramètres
-$1 = Répertoire de travail de départ où ont été déchargée les images
-$2 = Répertoire de destination au format "YYYY_MM_DD_Etiquette" ~/Images/2014_08_16_Meudon
-$3 = Etiquette pour les images (Lieu / Thèmes)
+    Use the git add command to add new files to the cloned repository.
+    git add workflow.sh 
 
-si besoin de renommer fichier de manière incrementale (camera upload)
-j=0;for i in *.jpg;do let j+=1;mv "$i" "img_$j.jpg";done
+    Commit all files to the cloned Git repository.
+    git commit -a -m "v1.0.3- Normalise et renomme fichiers source .jpg en .JPG"
+
+    Push the transaction to the Git cloud repository.
+    git push origin master
+    Username for 'https://github.com': lephotographelibre@yahoo.com
+    Password for 'https://lephotographelibre@yahoo.com@github.com': *********
+
+    Enter exit to close the Git Bash prompt.
