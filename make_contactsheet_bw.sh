@@ -38,7 +38,7 @@ display_usage() {
 echo "* Repertoire de travail = $1"
 
 # 1- Création des répertoires de travail temporaires
-mkdir $1/BW 
+mkdir $1/BW
 
 # 2 - Conversion en Greyscale --> copie des images grayscale dans dossier $1/BW
 
@@ -60,7 +60,6 @@ montage -verbose -label '%f' -font Ubuntu -pointsize ${FONTSIZE} -tile 7x5  \
 		-background '#000000' -fill 'gray' -define jpeg:size=${SIZE}x${SIZE} \
 		-title $(echo $1) -auto-orient \
 		-geometry ${SIZE}x${SIZE}+2+2   *.JPG    contactsheet.JPG
-
 cp  contactsheet.JPG ..
 
 # 4 - Ménage
