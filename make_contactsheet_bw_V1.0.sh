@@ -63,7 +63,7 @@ for D in "$@"; do
             rm 	 $REMOVELIST
         else
             echo "*** Skipping existing contact sheet $FN"
-						echo "*** Please remove it before running this script"
+			echo "*** Please remove it before running this script"
         fi
     done
 done
