@@ -34,24 +34,24 @@ for D in "$@"; do
 								 
                 case $F in
                     *JPG|*jpg)
-											  BW=$( basename "$F" )
-												echo "."
-												#	convert .jpg to .JPG
-												cp $F  "/tmp/${BW}.cv.JPG"
-												REMOVELIST="$REMOVELIST /tmp/${BW}.cv.JPG"
-												#convert to Greyscale
-												convert -type Grayscale "/tmp/${BW}.cv.JPG" "/tmp/${BW}.bw.JPG"
-												#											rm "${BW}.cv.JPG"
+						BW=$( basename "$F" )
+						echo "."
+						#	convert .jpg to .JPG
+						cp $F  "/tmp/${BW}.cv.JPG"
+						REMOVELIST="$REMOVELIST /tmp/${BW}.cv.JPG"
+						#convert to Greyscale
+						convert -type Grayscale "/tmp/${BW}.cv.JPG" "/tmp/${BW}.bw.JPG"
+						#rm "${BW}.cv.JPG"
                         FILES="$FILES /tmp/${BW}.bw.JPG"
-												REMOVELIST="$REMOVELIST  /tmp/${BW}.bw.JPG"
+						REMOVELIST="$REMOVELIST  /tmp/${BW}.bw.JPG"
                         ;;
-										*CR2)
-		                    BN=$( basename "$F" )
-		                    dcraw -e $F
-		                    mv ${F//.CR2}.thumb.jpg /tmp/${BN//.CR2}.thumb.jpg
-		                    REMOVELIST="$REMOVELIST /tmp/${BN//.CR2}.thumb.jpg"
-		                    FILES="$FILES /tmp/${BN//.CR2}.thumb.jpg"
-		                    ;;
+					*CR2)
+		                BN=$( basename "$F" )
+		                dcraw -e $F
+		                mv ${F//.CR2}.thumb.jpg /tmp/${BN//.CR2}.thumb.jpg
+		                REMOVELIST="$REMOVELIST /tmp/${BN//.CR2}.thumb.jpg"
+		                FILES="$FILES /tmp/${BN//.CR2}.thumb.jpg"
+		                ;;
                 esac
             done
 
