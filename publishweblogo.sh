@@ -5,17 +5,7 @@
 # History
 # 2018-03_03 - Création
 
-# Format de nom des images YYYY_MM_DD_img_XXXX.jpg ou YYYY_MM_DD_IMG_img.cr2 (Minuscules/sans espaces)
-#
-# Paramètres
-# $1 = Répertoire de travail de départ où ont été déchargée les images
-# $2 = Répertoire de destination au format "YYYY_MM_DD_Etiquette" ~/Images/2014_08_16_Meudon
-# $3 = Etiquette pour les images (Lieu / Thèmes)
-#
-# REM ***********************************************************************
-# REM si besoin de renommer fichier de manière incrementale (camera upload)
-# j=0;for i in *.jpg;do let j+=1;mv "$i" "img_$j.jpg";done
-#
+
 echo "*** Resize4Web ***"
 # Usage
 display_usage() {
@@ -34,10 +24,6 @@ display_usage() {
 		display_usage
 		exit 1
 	fi
-# Tester si un logo a été passé en paramètre ($3)
-if [ -n "$3" ]; then
-    echo "*** Un logo passé en paramètre 3: "+$3
-fi
 
 
 # 00 - Lancement
@@ -65,7 +51,7 @@ mkdir web1024
 # Tester si le fichier logo existe
 if [ -f "$3" ] 
 then 
-   echo "Le fichier "+$3+" existe"
+   echo "Le fichier logo "+$3+" existe"
 else  
    echo "******* ATTENTION ********* Le fichier logo passé en paramètre n'exite pas"
    echo "*********** Les fichiers traités se trouvent dans le répertoire = "`pwd`
