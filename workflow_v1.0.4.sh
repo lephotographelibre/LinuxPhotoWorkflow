@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# workflow.sh v1.0.2 Déchargement et pré-classement lot de photos
+# workflow.sh -- Déchargement et pré-classement lot de photos
 #
 # History
 
@@ -23,10 +23,10 @@ echo "*** Linux Workflow ***"
 # Usage
 display_usage() {
 	echo " "
-	echo "Ce script doit avoir moins 2 arguments "
-	echo "Répertoire de travail de départ où ont été déchargée les images"
-	echo "Répertoire de destination au format YYYY_MM_DD_Etiquette"
-	echo "Etiquette pour les images (Lieu / Thèmes)"
+	echo "Ce script doit avoir moins 3 arguments "
+	echo "1- Répertoire de travail de départ où ont été déchargée les images"
+	echo "2- Répertoire de destination au format YYYY_MM_DD_Etiquette"
+	echo "3 - Etiquette pour les images (Lieu / Thèmes)"
 	echo " "
 	echo "**** Usage: $0 [3 arguments] "
 	}
@@ -44,8 +44,9 @@ display_usage() {
 
 echo "* Repertoire de travail de départ = $1"
 echo "* Repertoire de travail de destimation = $2"
-cd $1
 echo "* Etiquette  = $3"
+cd $1
+
 #
 # Contient la date pour préfixer les images
 JOUR=`date +%Y_%m_%d_`
@@ -59,8 +60,8 @@ echo "* Où je suis = $PWD"
 # 1- Création des répertoires de travail
 
 mkdir $2
-mkdir $2/0.JPG
-mkdir $2/0.RAW
+mkdir $2/0.JPG 
+mkdir $2/0.RAW 
 #mkdir $2/1.THUMBNAIL
 mkdir $2/2.HDR
 mkdir $2/3.PANO
