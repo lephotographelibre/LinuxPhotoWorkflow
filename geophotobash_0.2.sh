@@ -29,10 +29,6 @@ while getopts "h?g" opt; do
   shift $((OPTIND-1))
   city=$1
   # JMD replace blank in city name with %20
-  #avant=$1
-  #apres=$(echo "$avant" |sed -e "s/ \{1,\}/%20/g")
-  #citystd=$apres
-  #echo "DEBUG - Ville std" $citystd
   citystd=${city// /%20}
   echo "DEBUG - Ville std" $citystd
 
