@@ -26,3 +26,5 @@
     Password for 'https://lephotographelibre@yahoo.com@github.com': *********
 
     Enter exit to close the Git Bash prompt.
+    
+    Use Atom & Git/GitHub std Packages see Youtube tutorial at https://www.youtube.com/watch?v=HqrkEVWBifw
