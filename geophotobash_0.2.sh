@@ -9,6 +9,7 @@
 #       remove blank into the city name
 #       Usage geophotobash_0.2.sh -g "La Rochelle"
 #       use ""
+# 0.2.1 Change blank parser in the city name
 
 
 OPTIND=1
