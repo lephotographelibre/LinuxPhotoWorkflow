@@ -2,7 +2,7 @@
 #
 # From: Linux Photography 19.01.01 - Dmitri Popov
 #
-while getopts "h?sdyar" opt; do
+while getopts "h?sdyare" opt; do
 case $opt in
     s) exiftool -directory=%e .
     ;;
@@ -14,6 +14,8 @@ case $opt in
     ;;
     r) exiftool -overwrite_original -all= -r .
     ;;
+    e) exiftool -directory=%e DIR
+    ;;
     h|\?)
     cat <<EOF
   USAGE:
@@ -23,6 +25,7 @@ case $opt in
     $0 -y sort photos into folders by year, month, and date
     $0 -a save key EXIF data in the results.txt file
     $0 -r remove all EXIF metadata from photos
+    $0 -e sorts photos into directories named by the original extension
   EOF
     exit 2
   ;;
