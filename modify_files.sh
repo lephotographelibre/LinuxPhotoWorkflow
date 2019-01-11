@@ -10,7 +10,7 @@ while getopts "h?c" opt; do
     ls -al ${2%.*}.*
       ;;
     h|\?)
-      echo "USAGE: -c "
+      echo "USAGE: -c Convert file from png to jpg (Quality 90%)"
       exit 2
       ;;
   esac
