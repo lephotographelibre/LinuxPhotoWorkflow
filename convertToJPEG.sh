@@ -1,5 +1,5 @@
 #!/bin/sh
-# from: aurelien pierre
+# from: aurelien pierre https://dev.aurelienpierre.com/wordpress-pour-le-photographe/
 # Modifie pour le web toutes les images d'une extension donnée
 # Parcourt les dossiers et sous-dossiers récursivement
 # Compresse en JPEG optimisé et accentue la netteté
